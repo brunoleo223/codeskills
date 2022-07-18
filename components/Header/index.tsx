@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link';
 import styles from './Header.module.scss';
 
-export function Header(){
+export const Header = () => {
     return (
         <>
             <div className={styles.videoBg}>
