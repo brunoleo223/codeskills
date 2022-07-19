@@ -1,0 +1,39 @@
+@import "styles/variables";
+
+.post{
+    position: relative;
+
+    &:hover{
+        .post__title{
+            color: $laranja !important;
+        }
+    }
+
+    &__thumb{
+        img{
+            border-radius: 20px;
+        }
+    }
+    &__category{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 13px;
+        background-color: $bg;
+        padding: 1px 10px;
+        border-radius: 5px;
+        color: #fff;
+    }
+    &__content{
+        color: #fff;
+    }
+    &__title{
+        margin: 20px 0;
+        font-size: 19px;
+        line-height: 24px;
+    }
+    &__description{
+        font-size: 18px;
+        line-height: 30px;
+    }
+}
