@@ -14,7 +14,6 @@ export const Menu = () => {
                     />
                 </div>
                 <ul>
-                    <li>Home</li>
                     <li>Artigos</li>
                     <li>Aulas ao vivo</li>
                     <li>Contato</li>
