@@ -7,9 +7,9 @@ export const Menu = () => {
             <div className={`container ${styles.container}`}>
                 <div>
                     <Image
-                        src="/images/logo.png"
+                        src="/images/logo.gif"
                         width={161}
-                        height={66}
+                        height={90}
                         alt="Logo CodeSkills"
                     />
                 </div>
