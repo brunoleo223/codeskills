@@ -34,6 +34,27 @@ export const usePosts = () => {
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend odio sed massa elementum lacinia. Ut sed rhoncus enim. Nunc viverra, sem a rhoncus dictum, risus tellus sodales elit. 3',
             image: 'https://i.picsum.photos/id/931/1000/600.jpg?hmac=MS-IoXwLrNHPZcLNIlMw7UTHezGmiyfwUMU7NpW-KTg',
             category: 'Artigos'
+        },
+        {
+            id: 6,
+            title: 'Post 6',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend odio sed massa elementum lacinia. Ut sed rhoncus enim. Nunc viverra, sem a rhoncus dictum, risus tellus sodales elit. 3',
+            image: 'https://i.picsum.photos/id/931/1000/600.jpg?hmac=MS-IoXwLrNHPZcLNIlMw7UTHezGmiyfwUMU7NpW-KTg',
+            category: 'Artigos'
+        },
+        {
+            id: 7,
+            title: 'Post 7',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend odio sed massa elementum lacinia. Ut sed rhoncus enim. Nunc viverra, sem a rhoncus dictum, risus tellus sodales elit. 3',
+            image: 'https://i.picsum.photos/id/331/1000/600.jpg?hmac=47MX7eNc1yNUOjjFInspf3-_T93lDaT20iARPlnfZf0',
+            category: 'Artigos'
+        },
+        {
+            id: 8,
+            title: 'Post 8',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend odio sed massa elementum lacinia. Ut sed rhoncus enim. Nunc viverra, sem a rhoncus dictum, risus tellus sodales elit. 3',
+            image: 'https://i.picsum.photos/id/955/1000/600.jpg?hmac=MDGBeDLPGxqGhZWlVRj-fzgZpApDONdDIh9hgQOUTgk',
+            category: 'Artigos'
         }
     ]
 }
