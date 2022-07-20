@@ -34,13 +34,6 @@ export const usePosts = () => {
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend odio sed massa elementum lacinia. Ut sed rhoncus enim. Nunc viverra, sem a rhoncus dictum, risus tellus sodales elit. 3',
             image: 'https://i.picsum.photos/id/931/1000/600.jpg?hmac=MS-IoXwLrNHPZcLNIlMw7UTHezGmiyfwUMU7NpW-KTg',
             category: 'Artigos'
-        },
-        {
-            id: 6,
-            title: 'Post 6',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend odio sed massa elementum lacinia. Ut sed rhoncus enim. Nunc viverra, sem a rhoncus dictum, risus tellus sodales elit. 3',
-            image: 'https://i.picsum.photos/id/379/1000/600.jpg?hmac=Lk72FNJcxLk9GwCbaqQaeGDcCu47x2njm7XJkuo7LxM',
-            category: 'Artigos'
         }
     ]
 }

@@ -6,7 +6,6 @@ import Menu from '../components/Menu'
 const Home: NextPage = () => {
   return (
     <>
-      <Menu />
       <Header />
       <ListPosts />
     </>
