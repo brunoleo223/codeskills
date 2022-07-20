@@ -11,9 +11,14 @@ export const Header = () => {
             <div className="container">
                 <div className={styles.postData}>
                     <div>
-                        <h1 className={styles.postData__title}>
-                            A crise do programador júnior (desde sempre)
-                        </h1>
+                        
+                        <Link href="#">
+                            <a>
+                                <h1 className={styles.postData__title}>
+                                    A crise do programador júnior (desde sempre)
+                                </h1>
+                            </a>
+                        </Link>
                         <p className={styles.postData__description}>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend odio sed massa elementum lacinia. Ut sed rhoncus enim. Nunc viverra, sem a rhoncus dictum, risus tellus sodales elit.
                         </p>

@@ -9,7 +9,7 @@ export const ListPosts = () => {
     return (
         <div className="container">
             <div className={styles.listPosts}>
-                {posts.map(post => (
+                {posts.map((post) => (
                     <Post key={post.id} data={post} />
                 ))}
             </div>

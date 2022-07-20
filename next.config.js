@@ -8,6 +8,6 @@ module.exports = nextConfig
 
 module.exports = {
   images: {
-    domains: ['picsum.photos'],
+    domains: ['i.picsum.photos', 'picsum.photos'],
   },
 }

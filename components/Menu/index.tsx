@@ -15,7 +15,6 @@ export const Menu = () => {
                 </div>
                 <ul>
                     <li>Artigos</li>
-                    <li>Aulas ao vivo</li>
                     <li>Contato</li>
                 </ul>
             </div>
