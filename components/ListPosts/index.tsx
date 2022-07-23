@@ -1,17 +1,18 @@
-import usePosts from "../../utils/usePosts";
 import Post from "../Post";
 import Promo from "../Promo";
 import styles from "./ListPosts.module.scss";
 
-export const ListPosts = () => {
-
-    const posts = usePosts();
+export const ListPosts = (data: any) => {
     let count = -1;
+
+    const posts = data.posts;
+
+    console.log('post data', data.posts);
     
     return (
         <div className="container">
             <div className={styles.listPosts}>
-                {posts.map((post, index) => {
+                {/* {posts.map((post: any, index: number) => {
                     count++;
                     return  count === 1 || count == 4 ? (
                         <>
@@ -22,7 +23,7 @@ export const ListPosts = () => {
                     ) : (
                         <Post key={post.id} data={post} />
                     ); 
-                })}
+                })} */}
             </div>
         </div>
     )
