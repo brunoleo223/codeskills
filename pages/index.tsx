@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Header from '../components/Header'
 import ListPosts from '../components/ListPosts'
+import { IPost } from '../interfaces/Interfaces';
 import { request } from "../lib/datocms";
 
 const HOMEPAGE_QUERY = `query {
@@ -19,6 +20,9 @@ const HOMEPAGE_QUERY = `query {
     id
     publishDate
     slug
+    category {
+        category
+      }
     }
 }`;
 export async function getStaticProps() {
@@ -32,7 +36,7 @@ export async function getStaticProps() {
 
 interface HomeProps {
   data: {
-    allArticles: any
+    allArticles: IPost[]
   }
 }
 

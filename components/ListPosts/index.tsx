@@ -1,8 +1,13 @@
+import { IPost } from "../../interfaces/Interfaces";
 import Post from "../Post";
 import Promo from "../Promo";
 import styles from "./ListPosts.module.scss";
 
-export const ListPosts = (data: any) => {
+interface ListPostsProps {
+    posts: IPost[];
+}
+
+export const ListPosts = (data: ListPostsProps) => {
     let count = -1;
 
     const posts = data.posts;
@@ -12,7 +17,7 @@ export const ListPosts = (data: any) => {
     return (
         <div className="container">
             <div className={styles.listPosts}>
-                {/* {posts.map((post: any, index: number) => {
+                {posts.map((post, index) => {
                     count++;
                     return  count === 1 || count == 4 ? (
                         <>
@@ -23,7 +28,7 @@ export const ListPosts = (data: any) => {
                     ) : (
                         <Post key={post.id} data={post} />
                     ); 
-                })} */}
+                })}
             </div>
         </div>
     )
