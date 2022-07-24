@@ -13,12 +13,12 @@ export const Post = ({ data }: PostProps) => {
         <div className={styles.post}>
             <div className={styles.post__thumb}>
                 <Link href={`artigo/${data.slug}`}>
-                    <a className={styles.img}><Image data={data.coverImage.responsiveImage} className={styles.image} alt={data.title} /></a>
+                    <a className={styles.img}><Image data={data.coverImage.responsiveImage} className={styles.image} /></a>
                 </Link>
             </div>
             <div className={styles.post__category}>{data.category.category}</div>
             <div className={styles.post__content}>
-                <Link href={`post/${data.id}`}>
+                <Link href={`artigo/${data.slug}`}>
                     <a><h2 className={styles.post__title}>{data.title}</h2></a>
                 </Link>
                 <p className={styles.post__description}>{data.excerpt}</p>

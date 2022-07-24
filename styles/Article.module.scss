@@ -1,0 +1,118 @@
+@import "styles/variables";
+
+.artigo{
+    &__thumb{
+        width: 100%;
+        height: 500px;
+        @media (max-width: 768px){
+            height: 300px;
+        }
+        overflow: hidden;
+        position: relative;
+        z-index: -1;
+        margin-top: 40px;
+        border-radius: 20px 20px 0 0;
+        div {
+            max-width: 100% !important;
+            width: 100% !important;
+        }
+        img{
+            width: 100%;
+            @media (max-width: 768px){
+                max-width: 500%;
+                width: 149% !important;
+            }
+        }
+        &::after{
+            content: '';
+            height: 500px;
+            background: linear-gradient(0deg, rgba(14,17,22,1) 0%, rgba(14,17,22,0.5) 60%, rgba(14,17,22,0) 100%);
+            width: 100%;
+            display: block;
+            z-index: 1;
+            position: absolute;
+            bottom: 0px;
+            @media (max-width: 768px){
+                height: 300px;
+            }
+        }
+    }
+    &__title{
+        font-size: 50px;
+        margin-top: -200px;
+        padding: 0 30px;
+        margin-bottom: 20px;
+        text-align: center;
+        text-shadow: 0px 3px 6px #00000029;
+        @media (max-width: 768px){
+            font-size: 42px;
+            line-height: 39px;
+        }
+    }
+    
+    &__meta{
+        padding: 0 30px;
+        margin-bottom: 30px;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.533);
+        text-align: center;
+        @media (max-width: 768px){
+            font-size: 12px;
+        }
+    }
+    
+    &__content{
+        max-width: 1000px;
+        padding: 30px;
+        margin: 0 auto;
+        color: rgb(205, 205, 205);
+        @media (max-width: 768px){
+            padding: 30px 15px;
+        }
+        p{
+            margin-bottom: 1rem;
+        }
+        b, strong{
+            font-weight: 700;
+        }
+    }
+
+    &__footer{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 90px;
+
+        @media (max-width: 768px){
+            flex-direction: column;
+            align-items: center;
+            gap: 30px
+        }
+
+        & > a{
+            font-size: 1rem !important;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__share{
+        display: flex;
+        gap: 20px;
+
+        a{
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1px solid $border;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover{
+                color: $laranja;
+                border: 1px solid $laranja;
+            }
+        }
+    }
+}
