@@ -14,7 +14,19 @@ const HOMEPAGE_QUERY = `query {
         value
     }
     coverImage {
-        url
+      responsiveImage {
+        alt
+        aspectRatio
+        base64
+        bgColor
+        height
+        sizes
+        src
+        srcSet
+        title
+        webpSrcSet
+        width
+      }
     }
     excerpt
     id

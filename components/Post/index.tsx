@@ -1,18 +1,19 @@
-import Image from "next/image";
 import Link from "next/link";
 import { IPost } from "../../interfaces/Interfaces";
 import styles from './Post.module.scss';
+import { Image } from "react-datocms";
 
 interface PostProps {
     data : IPost
 }
 
 export const Post = ({ data }: PostProps) => {
+    console.log(data.coverImage.responsiveImage)
     return (
         <div className={styles.post}>
             <div className={styles.post__thumb}>
-                <Link href={`post/${data.slug}`}>
-                    <a className={styles.img}><Image src={data.coverImage.url} layout="fill" className={styles.image} alt={data.title} /></a>
+                <Link href={`artigo/${data.slug}`}>
+                    <a className={styles.img}><Image data={data.coverImage.responsiveImage} className={styles.image} alt={data.title} /></a>
                 </Link>
             </div>
             <div className={styles.post__category}>{data.category.category}</div>

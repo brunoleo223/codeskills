@@ -11,7 +11,7 @@ export interface IPost {
     author: IAuthor;
     content: string;
     coverImage: {
-        url: string;
+        responsiveImage: any;
     };
     excerpt: string;
     category: ICategory;
