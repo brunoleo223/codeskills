@@ -19,15 +19,16 @@ export const ListPosts = (data: ListPostsProps) => {
             <div className={styles.listPosts}>
                 {posts.map((post, index) => {
                     count++;
-                    return  count === 1 || count == 4 ? (
+                    return (
                         <>
+                        {(count === 1 || count == 4) &&
                             <Promo>
                                 <h2>{post.title}</h2>
                             </Promo>
-                        </>
-                    ) : (
+                        }
                         <Post key={post.id} data={post} />
-                    ); 
+                        </>
+                    )
                 })}
             </div>
         </div>

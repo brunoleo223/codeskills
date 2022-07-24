@@ -8,6 +8,6 @@ module.exports = nextConfig
 
 module.exports = {
   images: {
-    domains: ['i.picsum.photos', 'picsum.photos'],
+    domains: ['i.picsum.photos', 'picsum.photos', 'www.datocms-assets.com'],
   },
 }

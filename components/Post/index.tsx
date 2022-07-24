@@ -11,7 +11,7 @@ export const Post = ({ data }: PostProps) => {
     return (
         <div className={styles.post}>
             <div className={styles.post__thumb}>
-                <Link href={`post/${data.id}`}>
+                <Link href={`post/${data.slug}`}>
                     <a className={styles.img}><Image src={data.coverImage.url} layout="fill" className={styles.image} alt={data.title} /></a>
                 </Link>
             </div>
