@@ -115,7 +115,7 @@ function Slug({postData}: any) {
         <div className={styles.artigo__content}>
           <StructuredText 
             data={postData.content} 
-            renderBlock={({ record }: IImage) => {
+            renderBlock={({ record }: any) => {
               switch (record.__typename) {
                 case 'ImageRecord':
                   return <Image data={record.image.responsiveImage} />;
