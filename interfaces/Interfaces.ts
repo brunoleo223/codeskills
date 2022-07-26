@@ -19,3 +19,24 @@ export interface IPost {
     publishDate: string;
     slug: string;
 }
+
+export interface IImage{
+    record: {
+        __typename?: string;
+        image:  {
+            responsiveImage:  {
+            width?: number;
+            webpSrcSet?: string;
+            title?: string;
+            srcSet?: string
+            sizes?: string;
+            src?: string;
+            height?: number;
+            bgColor?: string;
+            base64?: string
+            aspectRatio?: string;
+            alt?: string
+            }
+        }
+    }
+}
