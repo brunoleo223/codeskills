@@ -55,7 +55,7 @@ interface HomeProps {
 const Home: NextPage<HomeProps> = ( props ) => {
   return (
     <>
-      <Header />
+      <Header posts={props.data.allArticles[0]} />
       <ListPosts posts={props.data.allArticles} />
     </>
   )

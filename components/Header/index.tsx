@@ -1,8 +1,14 @@
-import Image from 'next/image'
+import { Image } from "react-datocms";
 import Link from 'next/link';
+import { IPost } from '../../interfaces/Interfaces';
 import styles from './Header.module.scss';
 
-export const Header = () => {
+
+interface PostHeaderProps {
+    posts: IPost;
+}
+
+export const Header = ({posts}: PostHeaderProps) => {
     return (
         <>
             <div className={styles.videoBg}>
@@ -10,27 +16,26 @@ export const Header = () => {
             </div>
             <div className="container">
                 <div className={styles.postData}>
-                    <div>
+                    <div className={styles.postData__contnt}>
                         
-                        <Link href="#">
+                        <Link href={`artigo/${posts.slug}`}>
                             <a>
                                 <h1 className={styles.postData__title}>
-                                    A crise do programador júnior (desde sempre)
+                                    {posts.title}
                                 </h1>
                             </a>
                         </Link>
                         <p className={styles.postData__description}>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend odio sed massa elementum lacinia. Ut sed rhoncus enim. Nunc viverra, sem a rhoncus dictum, risus tellus sodales elit.
+                            {posts.excerpt}
                         </p>
-                        <Link href="#"><a className="btn">Ler Artigo</a></Link>
+                        <Link href={`artigo/${posts.slug}`}><a className="btn">Ler Artigo</a></Link>
                     </div>
-                    <Image
-                        className={styles.postData__thumb}
-                        src="/images/thumb.png"
-                        alt="Thumbnail"
-                        width={616}
-                        height={491}
-                    />
+                   
+                    {/* width={616} height={491} */}
+                    <div className={styles.postData__thumb}>
+                        <Image data={posts.coverImage.responsiveImage} />
+                    </div>
+
                 </div>
             </div>
         </>

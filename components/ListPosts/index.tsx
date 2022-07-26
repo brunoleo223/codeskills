@@ -11,6 +11,7 @@ export const ListPosts = (data: ListPostsProps) => {
     let count = -1;
 
     const posts = data.posts;
+    
 
     console.log('post data', data.posts);
     
@@ -18,17 +19,19 @@ export const ListPosts = (data: ListPostsProps) => {
         <div className="container">
             <div className={styles.listPosts}>
                 {posts.map((post, index) => {
-                    count++;
-                    return (
-                        <>
-                        {(count === 1 || count == 4) &&
-                            <Promo>
-                                <h2>{post.title}</h2>
-                            </Promo>
-                        }
-                        <Post key={post.id} data={post} />
-                        </>
-                    )
+                    if(index != 0){
+                        count++;
+                        return (
+                            <>
+                            {(count === 1 || count == 4) &&
+                                <Promo>
+                                    <h2>{post.title}</h2>
+                                </Promo>
+                            }
+                            <Post key={post.id} data={post} />
+                            </>
+                        )
+                    }
                 })}
             </div>
         </div>
