@@ -1,9 +1,42 @@
+@import "styles/variables";
+
 .promo{
     height: 100%;
     width: 100%;
-    border: 1px solid #ccc;
+    border: 1px solid $border;
     display: inline-block;
-    align-items: center;
-    justify-content: center;
-    display: flex;
+    
+    padding: 5px;
+    text-align: center;
+    background: linear-gradient(0deg, rgba($laranja,1) 0%, rgba($azul,1) 50%);
+    border-radius: 10px;
+    
+    & > div {
+        background-color: $bg;
+        height: 100%;
+        border-radius: 5px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        background-image: url('/images/bg_aprender.png');
+        background-size: cover;
+        background-position: right;
+        padding: 45px 30px;
+
+        h2{
+            font-size: 2.5rem;
+            line-height: 2.7rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        p{
+            font-size: 1.3rem;
+            line-height: 1.7rem;
+            color: #fff;
+            padding: 0 30px;
+        }
+    }
 }
