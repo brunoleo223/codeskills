@@ -1,7 +1,8 @@
 /* eslint-disable jsx-a11y/alt-text */
+import Head from "next/head";
 import Link from "next/link";
-import { Image, StructuredText } from "react-datocms";
-import { IImage, IPost } from "../../interfaces/Interfaces";
+import { Image, StructuredText, renderMetaTags } from "react-datocms";
+import { IPost } from "../../interfaces/Interfaces";
 import { request } from  "../../lib/datocms";
 import styles from "../../styles/Article.module.scss";
 
@@ -32,6 +33,11 @@ export const getStaticPaths = async () => {
 const ARTICLE_QUERY = `
 query Article($slug: String) {
   article(filter: {slug: {eq: $slug}}) {
+    seo: _seoMetaTags {
+      attributes
+      content
+      tag
+    }
     author {
       name
     }
@@ -102,6 +108,7 @@ export const getStaticProps = async ({ params }: any) => {
 function Slug({postData}: any) {
   return (
     <div className={styles.artigo}>
+      <Head>{renderMetaTags(postData.seo)}</Head>
       <div className="container">
         <div className="artigo__header">
           <div className={styles.artigo__thumb}>
