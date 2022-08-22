@@ -13,9 +13,6 @@ export const ListPosts = (data: ListPostsProps) => {
 
     const posts = data.posts;
     
-
-    console.log('post data', data.posts);
-    
     return (
         <div className="container">
             <div className={styles.listPosts}>

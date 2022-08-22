@@ -8,7 +8,6 @@ interface PostProps {
 }
 
 export const Post = ({ data }: PostProps) => {
-    console.log(data.coverImage.responsiveImage)
     return (
         <div className={styles.post}>
             <div className={styles.post__thumb}>
